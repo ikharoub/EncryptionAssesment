@@ -46,6 +46,7 @@ namespace Encryption
 
             for (int i = 0; i < text.Length; i++)
             {
+                // retunring validation result instead of exception for performance
                 if (text[i] < 65 || text[i] > 90)
                     return new StringEncryptionResult { ErrorMessage = "Only A-Z supported." };
 
